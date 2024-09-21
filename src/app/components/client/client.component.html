@@ -1,0 +1,124 @@
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header bg-success">
+                Client List -{{currentDate| date:'dd-mm-yyyy'}}
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Sr No. </th>
+                                    <th>Company Name</th>
+                                    <th>Person Name</th>
+                                    <th>contact Number</th>
+                                    <th>City</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for(item of clientList;track $index){
+                                <tr>
+                                    <td>{{$index+1}}</td>
+                                    <td>{{item.companyName| uppercase}}</td>
+                                    <td>{{item.contactPersonName}}</td>
+                                    <td>{{item.contactNo}}</td>
+                                    <td>{{item.city}}</td>
+                                    <td>
+                                        <button class="btn btn-primary m-1" (click)="onEdit(item)">Edit</button>
+                                        <button class="btn btn-danger" (click)="onDelete(item.clientId)">Delete</button>
+
+                                    </td>
+                                </tr>
+
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header bg-success">
+                New Client List
+            </div>
+            <div class="card-body">
+                <form #form="ngForm">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">company Name</label>
+                            <input type="text" class="form-control" name="companyName"
+                                [(ngModel)]="clientObject.companyName">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Person Name</label>
+                            <input type="text" class="form-control" #personName="ngModel" minlength="5" required
+                                name="contactPersonName" [(ngModel)]="clientObject.contactPersonName">
+                            @if(personName.touched){
+                            <div class="text-danger">
+                                @if(personName?.errors?.['required']){
+                                <span>This is required</span>
+                                }
+                                @if(personName?.errors?.['minlength']){
+                                <span>Min Lenght 5 </span>
+                                }
+                            </div>
+                            }
+
+                        </div>
+                        <div class="col-6">
+                            <label for="">city</label>
+                            <input type="text" class="form-control" name="city" [(ngModel)]="clientObject.city">
+                        </div>
+                        <div class="col-6">
+                            <label for="">state</label>
+                            <input type="text" class="form-control" name="state" [(ngModel)]="clientObject.state">
+                        </div>
+                        <div class="col-6">
+                            <label for="">pincode</label>
+                            <input type="text" class="form-control" name="pincode" [(ngModel)]="clientObject.pincode">
+                        </div>
+                        <div class="col-6">
+                            <label for="">address</label>
+                            <textarea class="form-control" name="address" [(ngModel)]="clientObject.address"></textarea>
+                        </div>
+                        <div class="col-6">
+                            <label for="">employee Strength</label>
+                            <input type="text" class="form-control" name="employeeStrength"
+                                [(ngModel)]="clientObject.employeeStrength">
+                        </div>
+                        <div class="col-6">
+                            <label for="">gstNo</label>
+                            <input type="text" class="form-control" name="gstNo" [(ngModel)]="clientObject.gstNo">
+                        </div>
+                        <div class="col-6">
+                            <label for="">contactNo</label>
+                            <input type="text" class="form-control" name="contactNo"
+                                [(ngModel)]="clientObject.contactNo">
+                        </div>
+                        <div class="col-6">
+                            <label for="">regNo</label>
+                            <input type="text" class="form-control" name="regNo" [(ngModel)]="clientObject.regNo">
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-6 text-center">
+                            <button class="btn bg-secondary" (click)="onReset()">Reset</button>
+                        </div>
+                        <div class="col-6 text-center">
+                            <button class="btn bg-success" [disabled]="!form.valid"
+                                (click)="onSaveClient()">{{clientObject.clientId !=0 ? 'Update Client':'Save
+                                Client'}}</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
