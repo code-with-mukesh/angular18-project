@@ -1,0 +1,9 @@
+Project files
+Package.json -> contain all the diffent library that the project require. DevDependencies only used for local & depepncies used for build.
+angular.json -> it is like as setting/configuartion file of the project.
+style.css -> Global css style file.
+.gitignore-> to hide all the unwanted file.
+tsconfig.json -> it contain typescript related configuartion files.
+index.html -> <app root> </app-root>
+main.ts -> first file to execute on server startup & will call AppComponent as it was define in it.
+app.config.ts -> contins few file reference like service file, HttpClient as it is replacemnt for app.modelue.ts file as  no need to import & declare here as it is standaolne file.
