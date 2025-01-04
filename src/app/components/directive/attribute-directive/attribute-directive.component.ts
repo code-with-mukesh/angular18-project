@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-attribute-directive',
@@ -11,7 +12,9 @@ import { Component } from '@angular/core';
 export class AttributeDirectiveComponent {
   div1BgColor:string='bg-primary';
   isDiv2Active:boolean=false;
-  constructor(){}
+  constructor(private router:Router){
+
+  }
 
   addRedColor(){
     this.div1BgColor="bg-danger";
@@ -22,6 +25,10 @@ export class AttributeDirectiveComponent {
 
   toggleDiv2NgClass(){
     this.isDiv2Active=!this.isDiv2Active;
+  }
+  naviagteToStructural(){
+  this.router.navigateByUrl("structural-dir")
+
   }
 
 }
