@@ -1,0 +1,51 @@
+<div class="mt-2 p-2 bg-primary text-white rounded">
+    <h1>Attribute Directive</h1>
+    <p>*ngClass,*ngStyle....</p>
+</div>
+<div class="row pt-3">
+    <div class="col-3">
+        <div  class="p-3 text-center" [ngClass]="div1BgColor">
+            <h4>Div-1</h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="p-3 text-center" [ngClass]="isDiv2Active==true?'bg-success':'bg-warning'" >
+            <h4>Div-2</h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="bg-success p-3 text-center">
+            <h4>Div-3</h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div  class="bg-primary p-3 text-center">
+            <h4>Div-4</h4>
+        </div>
+    </div>
+</div>
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        <button class="btn btn-danger" (click)="addRedColor()">Add Red</button>
+        <button class="btn btn-primary mx-2" (click)="addBlueColor()">ADD Blue</button>
+    </div>
+    <div class="col-3 text-center">
+        <button class="btn btn-success" (click)="toggleDiv2NgClass()">Toggle</button>
+    </div>
+    <div class="col-3 text-center">
+        <div style="display: flex;align-items: center;">
+            <input type="text"  placeholder="Num1" width="width-50">
+            <input type="text"  placeholder="Num2" width="width-50">
+        </div>
+    </div>
+    <div class="col-3 text-center">
+        <div style="display: flex;align-items: center;">
+            <input  type="checkbox" class="width-50">
+            <select>
+                <option>Select</option>
+                <option>India</option>
+                <option>USA</option>
+            </select>
+        </div>
+    </div>
+</div>
