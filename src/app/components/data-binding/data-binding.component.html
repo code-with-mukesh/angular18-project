@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-4">
+         One way .ts to .html
+    </div>
+    <div class="col-4"></div>
+    <div class="col-4"> </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="row">
+            <div class="col-4 bg-success">
+                interpolation
+                <h4>{{courseName}}</h4>
+                <input type="text" value="{{courseName}}" placeholder="Enter text"/>
+                <input type="{{inputType}}"/>
+            </div>
+            <div class="col-4">
+                property Binding
+                <div [class]="myClassName">Danger</div>
+                <input type="text" [value]="courseName"/>
+            </div>
+            <div class="col-4">
+                <button class="btn btn-success" (click)="showMessage('Welcome to Angular 18')">Show Message</button>
+                <span (click)="showMessage('This is span message')">click Me</span>
+                <button class="btn btn-success" (click)="changeCourrseName()">Change Course Name</button>  -{{courseName}}
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+       <input type="text" [(ngModel)]="courseName"/> - {{courseName}}
+    </div>
+    <div class="col-6">
+        {{firstName()}}
+    </div>
+</div>

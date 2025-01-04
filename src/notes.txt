@@ -7,3 +7,7 @@ tsconfig.json -> it contain typescript related configuartion files.
 index.html -> <app root> </app-root>
 main.ts -> first file to execute on server startup & will call AppComponent as it was define in it.
 app.config.ts -> contins few file reference like service file, HttpClient as it is replacemnt for app.modelue.ts file as  no need to import & declare here as it is standaolne file.
+
+Component -> ng g c 
+
+Data Binding -> one way , two way, signal
