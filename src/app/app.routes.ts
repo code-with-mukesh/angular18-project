@@ -6,6 +6,7 @@ import { AttributeDirectiveComponent } from './components/directive/attribute-di
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { IfElseComponent } from './components/controlflow/if-else/if-else.component';
 import { ForComponent } from './components/controlflow/for/for.component';
+import { PipeComponent } from './components/pipe/pipe.component';
 
 export const routes: Routes = [
     {
@@ -35,5 +36,9 @@ export const routes: Routes = [
     {
         path:'for',
         component:ForComponent
+    },
+    {
+        path:'pipe',
+        component:PipeComponent
     }
 ];
