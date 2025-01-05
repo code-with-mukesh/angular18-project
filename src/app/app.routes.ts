@@ -7,6 +7,7 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { IfElseComponent } from './components/controlflow/if-else/if-else.component';
 import { ForComponent } from './components/controlflow/for/for.component';
 import { PipeComponent } from './components/pipe/pipe.component';
+import { TemplateComponent } from './components/forms/template/template.component';
 
 export const routes: Routes = [
     {
@@ -40,5 +41,9 @@ export const routes: Routes = [
     {
         path:'pipe',
         component:PipeComponent
+    },
+    {
+        path:'template',
+        component:TemplateComponent
     }
 ];
