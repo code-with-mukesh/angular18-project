@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { AlertComponent } from '../../../reusable/alert/alert.component';
 
 @Component({
   selector: 'app-getapi',
   standalone: true,
-  imports: [],
+  imports: [AlertComponent],
   templateUrl: './getapi.component.html',
   styleUrl: './getapi.component.css'
 })
