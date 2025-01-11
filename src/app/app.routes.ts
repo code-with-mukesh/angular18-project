@@ -11,6 +11,7 @@ import { TemplateComponent } from './components/forms/template/template.componen
 import { ReactiveComponent } from './components/forms/reactive/reactive.component';
 import { GetapiComponent } from './components/api-integration/getapi/getapi.component';
 import { PostapiComponent } from './components/api-integration/postapi/postapi.component';
+import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
 
 export const routes: Routes = [
     {
@@ -20,6 +21,10 @@ export const routes: Routes = [
     {
         path:'emp-list',
         component:EmployeeListComponent
+    },
+    {
+        path:'life-cycle',
+        component:LifeCycleComponent
     },
     {
         path:'structural-dir',
