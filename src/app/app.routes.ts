@@ -12,6 +12,7 @@ import { ReactiveComponent } from './components/forms/reactive/reactive.componen
 import { GetapiComponent } from './components/api-integration/getapi/getapi.component';
 import { PostapiComponent } from './components/api-integration/postapi/postapi.component';
 import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
+import { NgTemplateComponent } from './components/ng-template/ng-template.component';
 
 export const routes: Routes = [
     {
@@ -65,5 +66,9 @@ export const routes: Routes = [
     {
         path:'postapi',
         component:PostapiComponent
+    },
+    {
+        path:'ngtemp',
+        component:NgTemplateComponent
     }
 ];

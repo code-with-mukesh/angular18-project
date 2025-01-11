@@ -1,0 +1,42 @@
+<div class="mt-2 p-2 bg-primary text-white rounded">
+    ng Template
+</div>
+<div class=" row pt-3">
+    <div class="col-4 bg-success text-white rounded" *ngIf="userLoggedIn==true;else notLogged" >
+        {{userName}}
+    </div>
+    <div class="col-4">
+    </div>
+</div>
+
+<div class=" row pt-3">
+    <div class="col-4">
+
+    </div>
+    <div class="col-4">
+        <ng-template #notLogged>
+            <p>User Not Logged In </p>
+        </ng-template>
+    </div>
+    
+</div>
+
+<div class="row pt-3">
+    <div class="col-4">
+
+    </div>
+    <div class="col-4">
+        <ng-template #dynamicTemp>
+            <p> Hi from Para</p>
+        </ng-template>
+    </div>
+    <div class="col-4">
+     <div #dynamicContainer>
+     </div>
+     </div>
+</div>
+<div class="row pt-3">
+    <div class="col-4">
+    <button (click)="onLoadTemplate()">Load Container</button>
+    </div>
+</div>
